@@ -1,22 +1,30 @@
 // Navigation menu data
 const navMenus = {
     about: [
-        { group: ["Mission & Vision", "Leadership Development"] },
-        { group: ["Our Beliefs"] },
-        { group: ["Staff, Elders, & Deacons"] },
-        { group: [], button: { text: "View All", href: "#" } }
+        { group: [{ text: "Mission & Vision", href: "mission-and-vision.html" }] },
+        { group: [{ text: "Our Beliefs", href: "#" }] },
+        { group: [{ text: "Staff", href: "#" }] },
+        { group: [{ text: "Volunteer Leadership", href: "#" }] },
     ],
     ministries: [
-        { group: ["Kids", "Students", "Adults", "Care", "Connections"] }
+        { group: [{ text: "Kids", href: "#" }] },
+        { group: [{ text: "Youth", href: "#" }] },
+        { group: [{ text: "Adults", href: "#" }] },
+        { group: [{ text: "Care", href: "#" }] },
+        { group: [{ text: "Connections", href: "#" }] }
     ],
     serve: [
-        { group: ["Volunteer", "Local Missions", "Global Missions"] }
+        { group: [{ text: "Volunteer", href: "#" }] },
+        { group: [{ text: "Local Missions", href: "#" }] },
+        { group: [{ text: "Global Missions", href: "#" }] }
     ],
     giving: [
-        { group: ["Give Online", "Ways to Give"] }
+        { group: [{ text: "Give Online", href: "#" }] },
+        { group: [{ text: "Ways to Give", href: "#" }] }
     ],
     events: [
-        { group: ["Upcoming Events", "Calendar"] }
+        { group: [{ text: "Upcoming Events", href: "#" }] },
+        { group: [{ text: "Calendar", href: "#" }] }
     ]
 };
 
@@ -76,17 +84,28 @@ function initNavigation() {
                     groupDiv.className = 'nav-menu-group';
 
                     if (item.group && item.group.length) {
-                        item.group.forEach(txt => {
-                            const el = document.createElement('div');
-                            el.textContent = txt;
+                        item.group.forEach(entry => {
+                            let el;
+                            if (typeof entry === 'string') {
+                                el = document.createElement('div');
+                                el.textContent = entry;
+                            } else {
+                                el = document.createElement('a');
+                                el.textContent = entry.text;
+                                el.href = entry.href || '#';
+                                el.style.textDecoration = 'none';
+                                el.style.color = '#333';
+                                // Always open in same tab
+                                el.target = '_self';
+                                el.addEventListener('mouseenter', () => {
+                                    el.style.color = '#007bff';
+                                });
+                                el.addEventListener('mouseleave', () => {
+                                    el.style.color = '#333';
+                                });
+                            }
                             el.style.cursor = 'pointer';
                             el.style.transition = 'color 0.2s ease';
-                            el.addEventListener('mouseenter', () => {
-                                el.style.color = '#007bff';
-                            });
-                            el.addEventListener('mouseleave', () => {
-                                el.style.color = '#333';
-                            });
                             groupDiv.appendChild(el);
                         });
                     }

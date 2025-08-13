@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission and Vision | Nicholasville Methodist Church</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <img src="images/NMC_Transparent.png" alt="Nicholasville Methodist Church"
+                    style="height:28px;vertical-align:middle;margin-right:1.25rem;" />
+                Nicholasville Methodist
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link" data-menu="about">About</a>
+                <a href="#" class="nav-link" data-menu="ministries">Ministries</a>
+                <a href="#" class="nav-link" data-menu="serve">Serve</a>
+                <a href="#" class="nav-link" data-menu="giving">Giving</a>
+                <a href="#" class="nav-link" data-menu="events">Events</a>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search" aria-label="Search">&#128269;</button>
+                <button class="nav-give">Give</button>
+            </div>
+        </div>
+        <div class="nav-menu-overlay" id="navMenuOverlay">
+            <div class="nav-menu-content" id="navMenuContent">
+                <!-- Dynamic menu content will be injected here -->
+            </div>
+        </div>
+    </nav>
+    <style>
+    .mv-hero-section {
+        position: relative;
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: hidden;
+    }
+    .mv-hero-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+    background: url('images/mission_header.png') center center/cover no-repeat;
+        z-index: 1;
+    }
+    .mv-hero-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(16, 40, 80, 0.7);
+        z-index: 2;
+    }
+    .mv-hero-content {
+        position: relative;
+        z-index: 3;
+        padding: 80px 0 0 100px;
+        max-width: 900px;
+    }
+    .mv-hero-label {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 2rem;
+        letter-spacing: 0.01em;
+    }
+    .mv-hero-title {
+        font-size: 4rem;
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        margin: 0;
+        font-family: 'Georgia', 'Times New Roman', serif;
+        text-shadow: 0 2px 16px rgba(0,0,0,0.25);
+    }
+    @media (max-width: 900px) {
+        .mv-hero-content { padding: 60px 0 0 30px; }
+        .mv-hero-title { font-size: 2.2rem; }
+        .mv-hero-label { font-size: 1.2rem; }
+    }
+    </style>
+
+
+    <section class="mv-hero-section">
+        <div class="mv-hero-bg"></div>
+        <div class="mv-hero-overlay"></div>
+        <div class="mv-hero-content">
+            <div class="mv-hero-label">Mission & Vision</div>
+            <h1 class="mv-hero-title">We exist to love God,<br>love people, and make<br>disciples of Jesus Christ.</h1>
+        </div>
+    </section>
+    <section class="mv-two-col-section">
+        <div class="mv-two-col-container">
+            <div class="mv-two-col-text">
+                <p>As a church, we are called to carry out the <strong>Great Commission and the Great Commandment</strong>,
+                    and our mission statement was created to capture both of these critical mandates.</p>
+                <p>Our mission drives everything we do, <strong>from the ministries we provide to the resources we
+                        produce.</strong> We hope this calling serves as an invitation to actively participate with us in
+                    the work of the Lord rather than remain a passive observer.</p>
+            </div>
+            <div class="mv-two-col-img">
+                <img src="images/joy.png" alt="Celebration" />
+            </div>
+        </div>
+    </section>
+    <style>
+        .mv-two-col-section {
+            background: #0d2c4a;
+            padding: 60px 0;
+            color: #fff;
+        }
+
+        .mv-two-col-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .mv-two-col-text {
+            flex: 1 1 500px;
+            font-size: 5rem;
+            line-height: 2;
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+            max-width: 700px;
+            color: #fff !important;
+        }
+
+        .mv-two-col-text,
+        .mv-two-col-text *,
+        .mv-two-col-text strong {
+            color: #fff !important;
+        }
+
+        .mv-two-col-text strong {
+            font-weight: 700;
+        }
+
+        .mv-two-col-img {
+            flex: 1 1 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 320px;
+            max-width: 600px;
+        }
+
+        .mv-two-col-img img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            display: block;
+        }
+
+        @media (max-width: 1000px) {
+            .mv-two-col-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .mv-two-col-img,
+            .mv-two-col-text {
+                max-width: 100%;
+            }
+
+            .mv-two-col-img img {
+                max-width: 100%;
+            }
+        }
+    </style>
+
+    <!-- Love God Section (Two-Column) -->
+    <section class="mv-split-section">
+        <div class="mv-split-container">
+            <div class="mv-split-left">
+                <div class="mv-split-img-bg"></div>
+                <div class="mv-split-overlay"></div>
+                <div class="mv-split-left-content">
+                    <span class="mv-split-title">Love God.</span>
+                </div>
+            </div>
+            <div class="mv-split-right">
+                <div class="mv-split-right-content">
+                    <p>We <strong>love God</strong> by growing in our knowledge of Him and living in worshipful obedience to His Word.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+    .mv-split-section {
+        width: 100vw;
+        background: none;
+        margin: 0;
+        padding: 0;
+    }
+    .mv-split-container {
+        display: flex;
+        width: 100vw;
+        min-height: 500px;
+        height: 40vw;
+        max-height: 600px;
+    }
+    .mv-split-left, .mv-split-right {
+        flex: 1 1 50%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+    .mv-split-left {
+        overflow: hidden;
+        min-height: 350px;
+    }
+    .mv-split-img-bg {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+    background: url('images/prayer_care.png') center center/cover no-repeat;
+        z-index: 1;
+    }
+    .mv-split-overlay {
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(24, 97, 170, 0.75);
+        z-index: 2;
+    }
+    .mv-split-left-content {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .mv-split-title {
+        color: #fff;
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.01em;
+        text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+        display: block;
+    }
+    .mv-split-right {
+        background: #0d2c4a;
+        min-height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .mv-split-right-content {
+        color: #fff;
+        font-size: 2rem;
+        font-family: 'Inter', Arial, sans-serif;
+        font-weight: 400;
+        max-width: 600px;
+        margin: 0 40px;
+        line-height: 1.5;
+    }
+    .mv-split-right-content strong {
+        font-weight: 700;
+        color: #fff;
+    }
+    @media (max-width: 900px) {
+        .mv-split-container {
+            flex-direction: column;
+            height: auto;
+            min-height: 0;
+            max-height: none;
+        }
+        .mv-split-left, .mv-split-right {
+            min-height: 220px;
+            width: 100vw;
+        }
+        .mv-split-title { font-size: 2rem; }
+        .mv-split-right-content { font-size: 1.2rem; margin: 30px 20px; }
+    }
+    </style>
+
+    <!-- Vision Section (Two-Column) -->
+    <section class="vision-split-section">
+        <div class="vision-split-container">
+            <div class="vision-split-left">
+                <div class="vision-split-left-content">
+                    <p>We strive to be a church where every person encounters <strong>the love of Christ</strong>, grows in faith, and serves our neighbors
+                        with compassion and grace.</p>
+                </div>
+            </div>
+            <div class="vision-split-right">
+                <div class="vision-split-img-bg"></div>
+                <div class="vision-split-overlay"></div>
+                <div class="vision-split-right-content">
+                    <span class="vision-split-title">OUR VISION.</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <style>
+        .vision-split-section {
+            width: 100vw;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .vision-split-container {
+            display: flex;
+            width: 100vw;
+            min-height: 500px;
+            height: 40vw;
+            max-height: 600px;
+        }
+
+        .vision-split-left,
+        .vision-split-right {
+            flex: 1 1 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .vision-split-right {
+            overflow: hidden;
+            min-height: 350px;
+        }
+
+        .vision-split-img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/vision.jpg') center center/cover no-repeat;
+            z-index: 1;
+        }
+
+        .vision-split-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(24, 97, 170, 0.75);
+            z-index: 2;
+        }
+
+        .vision-split-right-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .vision-split-title {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.01em;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            display: block;
+        }
+
+        .vision-split-left {
+            background: #0d2c4a;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vision-split-left-content {
+            color: #fff;
+            font-size: 2rem;
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 40px;
+            line-height: 1.5;
+        }
+
+        .vision-split-left-content strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        @media (max-width: 900px) {
+            .vision-split-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 0;
+                max-height: none;
+            }
+
+            .vision-split-left,
+            .vision-split-right {
+                min-height: 220px;
+                width: 100vw;
+            }
+
+            .vision-split-title {
+                font-size: 2rem;
+            }
+
+            .vision-split-left-content {
+                font-size: 1.2rem;
+                margin: 30px 20px;
+            }
+        }
+    </style>
+
+
+    <!-- Core Values / Supporting Content -->
+    <section class="core-values-section">
+        <div class="container core-values-grid">
+            <div class="core-value-block">
+                <h3>Worship</h3>
+                <p>We gather to honor God and experience His presence together.</p>
+            </div>
+            <div class="core-value-block">
+                <h3>Community</h3>
+                <p>We build authentic relationships and support one another in love.</p>
+            </div>
+            <div class="core-value-block">
+                <h3>Discipleship</h3>
+                <p>We grow in faith through teaching, study, and spiritual practices.</p>
+            </div>
+            <div class="core-value-block">
+                <h3>Service</h3>
+                <p>We serve our neighbors and the world, sharing Christ’s love in action.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values / Supporting Content -->
+    <section class="mv-split-section">
+        <div class="mv-split-container">
+            <div class="mv-split-left">
+                <div class="mv-split-img-bg"></div>
+                <div class="mv-split-overlay"></div>
+                <div class="mv-split-left-content">
+                    <span class="mv-split-title">Love God.</span>
+                </div>
+            </div>
+            <div class="mv-split-right">
+                <div class="mv-split-right-content">
+                    <p>We <strong>love God</strong> by growing in our knowledge of Him and living in worshipful obedience to
+                        His Word.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .mv-split-section {
+            width: 100vw;
+            background: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mv-split-container {
+            display: flex;
+            width: 100vw;
+            min-height: 500px;
+            height: 40vw;
+            max-height: 600px;
+        }
+
+        .mv-split-left,
+        .mv-split-right {
+            flex: 1 1 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .mv-split-left {
+            overflow: hidden;
+            min-height: 350px;
+        }
+
+        .mv-split-img-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/prayer_care.png') center center/cover no-repeat;
+            z-index: 1;
+        }
+
+        .mv-split-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(24, 97, 170, 0.75);
+            z-index: 2;
+        }
+
+        .mv-split-left-content {
+            position: relative;
+            z-index: 3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .mv-split-title {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.01em;
+            text-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+            display: block;
+        }
+
+        .mv-split-right {
+            background: #0d2c4a;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mv-split-right-content {
+            color: #fff;
+            font-size: 2rem;
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 40px;
+            line-height: 1.5;
+        }
+
+        .mv-split-right-content strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        @media (max-width: 900px) {
+            .mv-split-container {
+                flex-direction: column;
+                height: auto;
+                min-height: 0;
+                max-height: none;
+            }
+
+            .mv-split-left,
+            .mv-split-right {
+                min-height: 220px;
+                width: 100vw;
+            }
+
+            .mv-split-title {
+                font-size: 2rem;
+            }
+
+            .mv-split-right-content {
+                font-size: 1.2rem;
+                margin: 30px 20px;
+            }
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-main">
+            <section class="footer-col footer-col-nav">
+                <ul class="footer-list">
+                    <li><a href="index.html"><strong>Home</strong></a></li>
+                    <li><a href="mission-and-vision.html"><strong>Mission & Vision</strong></a></li>
+                    <li><a href="#"><strong>Ministries</strong></a></li>
+                    <li><a href="#"><strong>Serve</strong></a></li>
+                    <li><a href="#"><strong>Events</strong></a></li>
+                    <li><a href="#"><strong>Contact</strong></a></li>
+                </ul>
+            </section>
+            <section class="footer-col footer-col-info">
+                <div class="footer-title">Nicholasville Methodist Church</div>
+                <ul class="footer-list footer-list-info">
+                    <li><a href="#">New Here</a></li>
+                    <li><a href="mission-and-vision.html">Mission & Vision</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Staff</a></li>
+                    <li><a href="#">Jobs & Residencies</a></li>
+                    <li><a href="#">Weddings & Funerals</a></li>
+                </ul>
+            </section>
+            <!-- Add other footer columns as needed, or copy from index.html for full match -->
+        </div>
+        <div class="container">
+            <p>&copy; 2025 Nicholasville Methodist Church. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
